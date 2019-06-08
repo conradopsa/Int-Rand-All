@@ -12,7 +12,7 @@ void troca(int *a, int *b){
 int alimentarSeed = 1;
 
 int intRand(int i1, int i2){
-    /*Gera números alétorios entre i1 e 12*/
+    /*Gera nÃºmeros alÃ©torios entre i1 e 12*/
 
     //Alimentando seed
     if (alimentarSeed){
@@ -23,7 +23,7 @@ int intRand(int i1, int i2){
     //i1 --> intervalo fechado inicial (menor)
     //i2 --> intervalo fechado final (maior)
     
-    //Corrigindo qual variável é final e qual é inicial
+    //Corrigindo qual variÃ¡vel Ã© final e qual Ã© inicial
     if (i1>i2)
         troca(&i1, &i2);
 
@@ -31,17 +31,17 @@ int intRand(int i1, int i2){
     return i1 + (rand() % ( (i2+1) - i1));
 }
 
-//Tamanho de alocação do retorno de intRandAll()
+//Tamanho de alocaÃ§Ã£o do retorno de intRandAll()
 #define RDALL_ALLOC 10000
 
 char * retorno;
 
-//Função recursiva que trará o retorno
+//FunÃ§Ã£o recursiva que trarÃ¡ o retorno
 void intRdAllRec(int i1, int i2){
     int rd = intRand(i1, i2);
     
     //rd para string
-    char rdStr[5];
+    char rdStr[15];
     sprintf(rdStr, "%d, ", rd);
     
     //Concatenando Retorno
@@ -70,7 +70,7 @@ char * intRandAll(int i1, int i2){
 
     retorno = (char *)malloc(RDALL_ALLOC);
 
-    //Corrigindo qual variável é final e qual é inicial
+    //Corrigindo qual variÃ¡vel Ã© final e qual Ã© inicial
     if (i1>i2)
         troca(&i1, &i2);
 
